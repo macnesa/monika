@@ -1,355 +1,556 @@
 /* eslint-disable @next/next/no-img-element -- Project Owner requires direct delivery of pre-optimized production images. */
-import Link from "next/link";
 
-export default function Home() {
+import HomeMotion from "@/components/home/HomeMotion";
+import AmbientSurface from "@/components/ui/AmbientSurface";
+import PrimaryCta from "@/components/ui/PrimaryCta";
+import SecondaryCta from "@/components/ui/SecondaryCta";
+
+function HeroSection() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-ibm-plex-sans)]">
-      <header className="bg-[#141217] text-[#F5F1EB]">
-        <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-x-6 gap-y-5 px-5 py-5 sm:flex-nowrap sm:px-8 lg:px-10 lg:py-6">
-          <Link
-            href="/"
-            aria-label="Omnikaflow home"
-            className="text-[1.5rem] leading-none outline-none transition-opacity hover:opacity-75 focus-visible:ring-2 focus-visible:ring-[#F5F1EB] focus-visible:ring-offset-4 focus-visible:ring-offset-[#141217] sm:text-[1.75rem] [font-family:var(--font-marcellus)]"
-          >
-            Omnikaflow
-          </Link>
+    <section
+      data-motion-section="hero"
+      aria-labelledby="hero-heading"
+      className="relative isolate flex min-h-[680px] items-end overflow-hidden bg-[#332D2A] text-[#F5F1EB] sm:min-h-[750px] lg:min-h-[780px]"
+    >
+      <div
+        data-motion="hero-depth"
+        className="absolute inset-0 -z-30"
+      >
+        <img
+          data-motion="hero-image"
+          src="/images/home/hero.webp"
+          alt=""
+          width="1920"
+          height="3412"
+          fetchPriority="high"
+          className="h-full w-full object-cover object-center"
+        />
+      </div>
 
-          <nav
-            aria-label="Primary navigation"
-            className="order-3 flex basis-full items-center justify-center gap-7 text-[0.6875rem] leading-none tracking-[0.02em] text-[#B8B3B1] sm:order-none sm:basis-auto sm:gap-8"
-          >
-            <Link
-              href="/"
-              aria-current="page"
-              className="text-[#F5F1EB] outline-none transition-opacity hover:opacity-75 focus-visible:ring-2 focus-visible:ring-[#F5F1EB] focus-visible:ring-offset-4 focus-visible:ring-offset-[#141217]"
+      <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_top,rgba(0,0,0,0.82)_0%,rgba(0,0,0,0.62)_44%,rgba(0,0,0,0.22)_74%,rgba(0,0,0,0.08)_100%)] sm:bg-[linear-gradient(90deg,rgba(0,0,0,0.66)_0%,rgba(0,0,0,0.36)_50%,rgba(0,0,0,0.12)_78%,rgba(0,0,0,0.06)_100%)]" />
+
+      <div className="absolute inset-x-0 top-0 -z-10 h-36 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.56)_0%,rgba(0,0,0,0)_100%)]" />
+
+      <div className="mx-auto w-full max-w-[1240px] px-5 pb-12 pt-40 sm:px-8 sm:pb-16 sm:pt-36 lg:px-10 lg:pb-16">
+        <div className="grid grid-cols-12">
+          <div className="col-span-12 lg:col-span-9">
+            <p
+              data-motion="hero-eyebrow"
+              className="text-[0.6875rem] font-medium uppercase tracking-[0.2em] text-white/72 sm:text-xs"
             >
-              Home
-            </Link>
-            <span aria-disabled="true" className="cursor-default">
-              Services
-            </span>
-            <span aria-disabled="true" className="cursor-default">
-              Work
-            </span>
-          </nav>
+              MONIKA · WELLNESS FACILITY CONSULTING
+            </p>
 
-          <span
-            aria-disabled="true"
-            className="cursor-default rounded-[4px] bg-[#F5F1EB] px-4 py-3 text-[0.6875rem] font-medium leading-none tracking-[0.04em] text-[#181619] sm:px-5"
-          >
-            Book A Call
-          </span>
+            <h1
+              data-motion="hero-title"
+              id="hero-heading"
+              className="mt-5 max-w-[800px] text-[2.5rem] font-normal leading-[1.04] tracking-[-0.03em] sm:mt-6 sm:text-[clamp(2.75rem,4.8vw,4rem)] sm:leading-[1.03] [font-family:var(--font-marcellus)]"
+            >
+              I started on reception at eighteen. A few years later I was
+              running the two largest wellness centres in the group.
+            </h1>
+          </div>
         </div>
-      </header>
 
-      <main>
-        <section
-          aria-labelledby="hero-heading"
-          className="relative isolate flex min-h-[680px] overflow-hidden bg-[#332D2A] text-[#F5F1EB] sm:min-h-[740px] lg:min-h-[760px]"
-        >
-          <img
-            src="/images/home/hero.webp"
-            alt=""
-            width="1920"
-            height="3412"
-            fetchPriority="high"
-            className="absolute inset-0 -z-20 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 -z-10 bg-black/55" />
+        <div className="mt-7 grid grid-cols-12 gap-x-6 gap-y-6 sm:mt-9 sm:gap-y-7 lg:gap-x-10">
+          <p
+            data-motion="hero-copy"
+            className="col-span-12 max-w-[570px] text-[0.9375rem] leading-7 text-white/80 sm:text-base lg:col-span-6"
+          >
+            Now I work on other people&apos;s facilities: the layout, the team,
+            and how the place runs once the doors open.
+          </p>
 
-          <div className="mx-auto flex w-full max-w-[1240px] items-center px-5 py-20 sm:px-8 sm:py-24 lg:px-10">
-            <div className="max-w-[760px]">
-              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.2em] text-[#C4BFBA] sm:text-xs">
-                MONIKA · WELLNESS FACILITY CONSULTING
-              </p>
-              <h1
-                id="hero-heading"
-                className="mt-6 max-w-[16ch] text-[clamp(2.65rem,8.8vw,4.5rem)] font-normal leading-[1.08] tracking-[-0.025em] [font-family:var(--font-marcellus)]"
-              >
-                I started on reception at eighteen. A few years later I was
-                running the two largest wellness centres in the group.
-              </h1>
-              <p className="mt-6 max-w-[610px] text-base leading-7 text-[#D3CECA] sm:text-lg sm:leading-8">
-                Now I work on other people&apos;s facilities: the layout, the
-                team, and how the place runs once the doors open.
-              </p>
-              <span
-                aria-disabled="true"
-                className="mt-8 inline-flex cursor-default rounded-full border border-white/35 bg-black/45 px-7 py-4 text-sm font-medium tracking-[0.025em] text-white backdrop-blur-sm sm:px-8 sm:text-base"
-              >
+          <div className="col-span-12 flex items-start lg:col-span-4 lg:col-start-9 lg:justify-end">
+            <div
+              data-motion="hero-cta"
+              className="inline-block"
+            >
+              <PrimaryCta href="/book" tone="light">
                 Book a 15-minute call
-              </span>
+              </PrimaryCta>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        <section
-          aria-label="Experience statistics"
-          className="bg-[#211E25] text-[#F5F1EB]"
-        >
-          <div className="mx-auto grid max-w-[1240px] grid-cols-2 px-5 sm:px-8 lg:grid-cols-4 lg:px-10">
-            <div className="border-b border-r border-white/10 px-3 py-7 sm:px-6 sm:py-9 lg:border-b-0 lg:first:border-l">
-              <p className="text-[clamp(1.75rem,5vw,2.25rem)] leading-none [font-family:var(--font-marcellus)]">
-                8,000 m²
-              </p>
-              <p className="mt-3 text-[0.6875rem] text-[#8F898D]">
-                Facility Directed
-              </p>
-            </div>
-            <div className="border-b border-white/10 px-3 py-7 sm:px-6 sm:py-9 lg:border-b-0 lg:border-r">
-              <p className="text-[clamp(1.75rem,5vw,2.25rem)] leading-none [font-family:var(--font-marcellus)]">
-                300+
-              </p>
-              <p className="mt-3 text-[0.6875rem] text-[#8F898D]">Staff Led</p>
-            </div>
-            <div className="border-r border-white/10 px-3 py-7 sm:px-6 sm:py-9">
-              <p className="text-[clamp(1.75rem,5vw,2.25rem)] leading-none [font-family:var(--font-marcellus)]">
-                $138M
-              </p>
-              <p className="mt-3 text-[0.6875rem] text-[#8F898D]">
-                Group Revenue
-              </p>
-            </div>
-            <div className="px-3 py-7 sm:px-6 sm:py-9 lg:border-r">
-              <p className="text-[clamp(1.75rem,5vw,2.25rem)] leading-none [font-family:var(--font-marcellus)]">
-                3
-              </p>
-              <p className="mt-3 text-[0.6875rem] text-[#8F898D]">Countries</p>
+function ProofSection() {
+  return (
+    <section
+      aria-label="Experience statistics"
+      className="bg-[#211E25] text-[#F5F1EB]"
+    >
+      <div className="mx-auto max-w-[1240px] px-5 py-11 sm:px-8 sm:py-14 lg:px-10 lg:py-16">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-9 lg:grid-cols-4 lg:gap-x-12">
+          <div>
+            <p className="text-[2rem] leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-marcellus)]">
+              8,000 m²
+            </p>
+            <p className="mt-3 text-[0.6875rem] uppercase leading-5 tracking-[0.1em] text-white/60">
+              Facility Directed
+            </p>
+          </div>
+
+          <div>
+            <p className="text-[2rem] leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-marcellus)]">
+              300+
+            </p>
+            <p className="mt-3 text-[0.6875rem] uppercase leading-5 tracking-[0.1em] text-white/60">
+              Staff Led
+            </p>
+          </div>
+
+          <div>
+            <p className="text-[2rem] leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-marcellus)]">
+              $138M
+            </p>
+            <p className="mt-3 text-[0.6875rem] uppercase leading-5 tracking-[0.1em] text-white/60">
+              Group Revenue
+            </p>
+          </div>
+
+          <div>
+            <p className="text-[2rem] leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-marcellus)]">
+              3
+            </p>
+            <p className="mt-3 text-[0.6875rem] uppercase leading-5 tracking-[0.1em] text-white/60">
+              Countries
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function IntroductionSection() {
+  return (
+    <section
+      data-motion-section="introduction"
+      aria-labelledby="introduction-heading"
+      className="bg-[#F2EFE9] text-[#181619]"
+    >
+      <div className="mx-auto max-w-[1240px] px-5 py-16 sm:px-8 sm:py-28 lg:px-10 lg:py-36">
+        <div className="grid grid-cols-12 gap-x-6 gap-y-9 sm:gap-y-12 lg:gap-x-10">
+          <div
+            data-motion="intro-heading"
+            className="order-1 col-span-12 md:order-2 md:col-span-6 md:col-start-7 md:row-start-1 md:pt-14 lg:pt-24"
+          >
+            <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-[#665F5A]">
+              INTRODUCTION
+            </p>
+
+            <h2
+              id="introduction-heading"
+              className="mt-4 max-w-[17ch] text-[2.15rem] font-normal leading-[1.06] tracking-[-0.025em] sm:text-[clamp(2.2rem,3.5vw,2.9rem)] [font-family:var(--font-marcellus)]"
+            >
+              I started on reception at eighteen and never left the industry.
+            </h2>
+          </div>
+
+          <div className="order-2 col-span-12 md:order-1 md:col-span-5 md:row-span-2 md:row-start-1">
+            <div
+              data-motion="intro-image"
+              className="w-full max-w-[450px] rounded-[10px] border border-[#BFB5AB] bg-[#EEE8E0] p-[6px] sm:p-2 md:max-w-none"
+            >
+              <img
+                src="/images/home/introduction.webp"
+                alt="Woman moving outdoors among palm trees"
+                width="1179"
+                height="1754"
+                loading="lazy"
+                className="aspect-[3/4] w-full rounded-[2px] object-cover object-center"
+              />
             </div>
           </div>
-        </section>
 
-        <section
-          aria-labelledby="introduction-heading"
-          className="bg-[#F2EFE9] px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-36"
-        >
-          <div className="mx-auto grid max-w-[1060px] gap-12 md:grid-cols-[minmax(260px,0.85fr)_minmax(0,1.15fr)] md:items-center lg:gap-20">
-            <img
-              src="/images/home/introduction.webp"
-              alt="Woman moving outdoors among palm trees"
-              width="1179"
-              height="1754"
-              loading="lazy"
-              className="aspect-[3/4] w-full max-w-[390px] justify-self-center rounded-[18px] object-cover shadow-[0_8px_20px_rgba(30,25,22,0.12)] md:justify-self-start"
-            />
+          <div className="order-3 col-span-12 md:col-span-6 md:col-start-7 md:row-start-2">
+            <div
+              data-motion="intro-copy"
+              className="max-w-[610px] space-y-5 text-[0.9375rem] leading-7 text-[#5D5752] sm:text-base sm:leading-8"
+            >
+              <p>
+                That was Infinit in the Czech Republic. I took the job because
+                the building looked clean and organised, which was honestly the
+                whole reason. A few years later I was operational director of
+                the group, and somewhere in the middle of that I stopped
+                thinking of it as a job.
+              </p>
 
+              <p>
+                What I care about hasn&apos;t really changed since the reception
+                desk: whether people walk out feeling better than they walked
+                in, and whether the staff running the place are set up to make
+                that happen. Everything else, layout and systems and
+                programming, is in service of those two things.
+              </p>
+
+              <p>
+                I work independently now, on other people&apos;s facilities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BackgroundSection() {
+  return (
+    <section
+      data-motion-section="background"
+      aria-labelledby="background-heading"
+      className="relative isolate overflow-clip bg-[#E9E2D8] text-[#181619]"
+    >
+      <AmbientSurface
+        idPrefix="background-ambient"
+        motionHook="background-ambient"
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-56 bg-[linear-gradient(to_bottom,#F2EFE9_0%,rgba(242,239,233,0.72)_34%,rgba(242,239,233,0)_100%)] sm:h-72 lg:h-80"
+      />
+
+      <div className="relative z-10 mx-auto max-w-[1240px] px-5 py-16 sm:px-8 sm:py-28 lg:px-10 lg:py-36">
+        <div className="grid grid-cols-12 gap-x-6 gap-y-12 sm:gap-y-16 lg:gap-x-10">
+          <div className="col-span-12 lg:col-span-6">
             <div>
-              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-[#8C8780]">
-                INTRODUCTION
-              </p>
-              <h2
-                id="introduction-heading"
-                className="mt-4 max-w-[18ch] text-[clamp(2.25rem,6vw,3.25rem)] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-marcellus)]"
-              >
-                I started on reception at eighteen and never left the industry.
-              </h2>
-              <div className="mt-7 max-w-[620px] space-y-5 text-[0.9375rem] leading-7 text-[#625D58]">
-                <p>
-                  That was Infinit in the Czech Republic. I took the job because
-                  the building looked clean and organised, which was honestly
-                  the whole reason. A few years later I was operational director
-                  of the group, and somewhere in the middle of that I stopped
-                  thinking of it as a job.
-                </p>
-                <p>
-                  What I care about hasn&apos;t really changed since the reception
-                  desk: whether people walk out feeling better than they walked
-                  in, and whether the staff running the place are set up to make
-                  that happen. Everything else, layout and systems and
-                  programming, is in service of those two things.
-                </p>
-                <p>I work independently now, on other people&apos;s facilities.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section
-          aria-labelledby="background-heading"
-          className="bg-[#F2EFE9] px-5 pb-24 sm:px-8 sm:pb-32 lg:px-10 lg:pb-40"
-        >
-          <div className="mx-auto grid max-w-[1060px] gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(340px,0.95fr)] lg:items-center lg:gap-20">
-            <div>
-              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-[#8C8780]">
+              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-[#665F5A]">
                 BACKGROUND
               </p>
+
               <h2
                 id="background-heading"
-                className="mt-4 max-w-[15ch] text-[clamp(2.35rem,6vw,3.5rem)] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-marcellus)]"
+                className="mt-4 max-w-[12ch] text-[2.2rem] font-normal leading-[1.04] tracking-[-0.03em] sm:text-[clamp(2.25rem,3.7vw,3rem)] sm:leading-[1.03] [font-family:var(--font-marcellus)]"
               >
-                Fourteen years, three countries
+                <span className="block text-[#514B47]">
+                  Fourteen years,
+                </span>
+
+                <span className="mt-1 block text-[1.08em] text-[#181619]">
+                  three countries
+                </span>
               </h2>
-
-              <div className="mt-10 space-y-8 text-[0.9375rem] leading-7 text-[#625D58]">
-                <div>
-                  <h3 className="text-lg text-[#242124] [font-family:var(--font-marcellus)]">
-                    Infinit, Czech Republic
-                  </h3>
-                  <p className="mt-2">
-                    Reception to operational director over ten years. I ran the
-                    group&apos;s largest branch: 8,000 m², two saunas, four pools,
-                    cold plunges and treatment rooms alongside a second site,
-                    with around 300 people across both teams, inside a group
-                    turning over $138M a year. I was also responsible for opening
-                    Infinit Senohaby from an empty site, doing the layouts, the
-                    operating systems, and the hiring and training of everyone
-                    who worked there.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg text-[#242124] [font-family:var(--font-marcellus)]">
-                    Mindzero, United States
-                  </h3>
-                  <p className="mt-2">
-                    I moved to South Carolina to join a contrast therapy startup
-                    and I was responsible for launching its flagship studio in
-                    Mount Pleasant. It reached 564 members and $85K in monthly
-                    revenue within six months, off a presale that signed close to
-                    200 people before opening. I built the programming, around
-                    eighteen session formats, and trained the guides who ran
-                    them. I also brought Aufguss, the guided steam ritual, into a
-                    market that had never seen it.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg text-[#242124] [font-family:var(--font-marcellus)]">
-                    Indonesia
-                  </h3>
-                  <p className="mt-2">
-                    I consult here now. Facility projects, operations work, and
-                    staff training, including six in-house saunamasters for a
-                    studio in Bali.
-                  </p>
-                </div>
-              </div>
             </div>
 
-            <img
-              src="/images/home/portrait.webp"
-              alt="Portrait of a woman standing beside stone architecture"
-              width="1200"
-              height="1600"
-              loading="lazy"
-              className="aspect-[4/5] w-full max-w-[470px] justify-self-center rounded-[18px] object-cover shadow-[0_8px_20px_rgba(30,25,22,0.12)] lg:justify-self-end"
-            />
-          </div>
-        </section>
+            <div className="mt-12 space-y-12 sm:mt-14 sm:space-y-14 lg:mt-16 lg:space-y-16">
+              <article data-motion="career-record">
+                <p className="text-[0.6875rem] font-medium tracking-[0.14em] text-[#665F5A]">
+                  01
+                </p>
 
-        <section
-          aria-labelledby="services-heading"
-          className="relative isolate overflow-hidden bg-[#2E2927] px-5 py-20 text-[#F5F1EB] sm:px-8 sm:py-28 lg:px-10 lg:py-32"
-        >
-          <img
-            src="/images/home/services-bg.webp"
-            alt=""
-            width="1153"
-            height="2048"
-            loading="lazy"
-            className="absolute inset-0 -z-20 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 -z-10 bg-black/45" />
+                <h3 className="mt-3 font-normal">
+                  <span className="block text-[0.75rem] font-medium leading-none tracking-[0.08em] text-[#665F5A]">
+                    Infinit,
+                  </span>
 
-          <div className="mx-auto max-w-[1000px]">
-            <div className="max-w-[720px]">
-              <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-[#C4BFBA]">
-                WHAT I DO
-              </p>
-              <h2
-                id="services-heading"
-                className="mt-4 max-w-[18ch] text-[clamp(2.4rem,6vw,3.75rem)] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-marcellus)]"
-              >
-                Three services, and people rarely need just one.
-              </h2>
-              <p className="mt-6 text-base leading-8 text-[#D3CECA] sm:text-lg">
-                Someone calls about a room that empties out too fast.
-                <br />
-                It turns out the layout is fine and the schedule isn&apos;t.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-5 lg:grid-cols-3">
-              <article className="rounded-[18px] border border-white/15 bg-white/25 p-7 backdrop-blur-md sm:p-8">
-                <h3 className="text-[1.7rem] leading-[1.15] [font-family:var(--font-marcellus)]">
-                  Facility design consultation
+                  <span className="mt-2 block text-[1.85rem] leading-[1.04] tracking-[-0.025em] text-[#181619] sm:text-[2.15rem] [font-family:var(--font-marcellus)]">
+                    Czech Republic
+                  </span>
                 </h3>
-                <p className="mt-5 text-sm leading-6 text-[#DDD8D4]">
-                  Layout, guest flow, capacity, and how the hot and cold spaces
-                  sit against each other. Best before the drawings are locked,
-                  though I&apos;ll tell you honestly what&apos;s still fixable if the
-                  building&apos;s already up.
+
+                <p className="mt-4 max-w-[650px] text-[0.9375rem] leading-7 text-[#5D5752] sm:mt-5 sm:text-base sm:leading-8">
+                  <span className="font-medium text-[#292527]">
+                    Reception to operational director over ten years.
+                  </span>{" "}
+                  I ran the group&apos;s largest branch:{" "}
+                  <span className="font-medium text-[#292527]">8,000 m²</span>,
+                  two saunas, four pools, cold plunges and treatment rooms
+                  alongside a second site, with{" "}
+                  <span className="font-medium text-[#292527]">
+                    around 300 people across both teams
+                  </span>
+                  , inside a group turning over $138M a year. I was also
+                  responsible for opening Infinit Senohaby from an empty site,
+                  doing the layouts, the operating systems, and the hiring and
+                  training of everyone who worked there.
                 </p>
               </article>
 
-              <article className="rounded-[18px] border border-white/15 bg-white/25 p-7 backdrop-blur-md sm:p-8">
-                <h3 className="text-[1.7rem] leading-[1.15] [font-family:var(--font-marcellus)]">
+              <article data-motion="career-record">
+                <p className="text-[0.6875rem] font-medium tracking-[0.14em] text-[#665F5A]">
+                  02
+                </p>
+
+                <h3 className="mt-3 font-normal">
+                  <span className="block text-[0.75rem] font-medium leading-none tracking-[0.08em] text-[#665F5A]">
+                    Mindzero,
+                  </span>
+
+                  <span className="mt-2 block text-[1.85rem] leading-[1.04] tracking-[-0.025em] text-[#181619] sm:text-[2.15rem] [font-family:var(--font-marcellus)]">
+                    United States
+                  </span>
+                </h3>
+
+                <p className="mt-4 max-w-[650px] text-[0.9375rem] leading-7 text-[#5D5752] sm:mt-5 sm:text-base sm:leading-8">
+                  I moved to South Carolina to join a contrast therapy startup
+                  and I was responsible for launching its flagship studio in
+                  Mount Pleasant. It reached{" "}
+                  <span className="font-medium text-[#292527]">
+                    564 members
+                  </span>{" "}
+                  and{" "}
+                  <span className="font-medium text-[#292527]">
+                    $85K in monthly revenue within six months
+                  </span>
+                  , off a presale that signed{" "}
+                  <span className="font-medium text-[#292527]">
+                    close to 200 people before opening
+                  </span>
+                  . I built the programming, around eighteen session formats,
+                  and trained the guides who ran them. I also brought Aufguss,
+                  the guided steam ritual, into a market that had never seen it.
+                </p>
+              </article>
+
+              <article data-motion="career-record">
+                <p className="text-[0.6875rem] font-medium tracking-[0.14em] text-[#665F5A]">
+                  03
+                </p>
+
+                <h3 className="mt-3">
+                  <span className="block text-[1.85rem] font-normal leading-[1.04] tracking-[-0.025em] text-[#181619] sm:text-[2.15rem] [font-family:var(--font-marcellus)]">
+                    Indonesia
+                  </span>
+                </h3>
+
+                <p className="mt-4 max-w-[650px] text-[0.9375rem] leading-7 text-[#5D5752] sm:mt-5 sm:text-base sm:leading-8">
+                  I consult here now. Facility projects, operations work, and
+                  staff training, including{" "}
+                  <span className="font-medium text-[#292527]">
+                    six in-house saunamasters
+                  </span>{" "}
+                  for a studio in Bali.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div className="hidden lg:col-span-5 lg:col-start-8 lg:block">
+            <div className="lg:sticky lg:top-24">
+              <div className="w-full rounded-[10px] border border-[#BFB5AB] bg-[#EEE8E0] p-2">
+                <img
+                  src="/images/home/portrait.webp"
+                  alt="Portrait of a woman standing beside stone architecture"
+                  width="1200"
+                  height="1600"
+                  loading="lazy"
+                  className="aspect-[3/4] w-full rounded-[2px] object-cover object-center"
+                />
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ServicesSection() {
+  return (
+    <section
+      data-motion-section="services"
+      aria-labelledby="services-heading"
+      className="relative isolate overflow-hidden bg-[#2E2927] text-[#F5F1EB]"
+    >
+      <img
+        data-motion="services-bg"
+        src="/images/home/services-bg.webp"
+        alt=""
+        width="1153"
+        height="2048"
+        loading="lazy"
+        className="absolute inset-0 -z-30 h-full w-full object-cover object-center brightness-[0.68] contrast-[0.82] saturate-[0.78] sm:brightness-100 sm:contrast-100 sm:saturate-100"
+      />
+
+      <div className="absolute inset-0 -z-20 bg-black/40 sm:bg-black/55" />
+
+      <div className="mx-auto max-w-[1240px] px-5 py-16 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+        <div className="grid grid-cols-12 gap-x-6 gap-y-10 sm:gap-y-14 lg:gap-x-10">
+          <div
+            data-motion="services-intro"
+            className="col-span-12 lg:col-span-4"
+          >
+            <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-white/72">
+              WHAT I DO
+            </p>
+
+            <h2
+              id="services-heading"
+              className="mt-4 max-w-[13ch] text-[2.2rem] font-normal leading-[1.04] tracking-[-0.03em] sm:text-[clamp(2.25rem,3.7vw,3rem)] sm:leading-[1.03] [font-family:var(--font-marcellus)]"
+            >
+              Three services, and people rarely need just one.
+            </h2>
+
+            <p className="mt-6 max-w-[410px] text-[0.9375rem] leading-7 text-white/78 sm:text-base">
+              Someone calls about a room that empties out too fast.
+              <br />
+              It turns out the layout is fine and the schedule isn&apos;t.
+            </p>
+          </div>
+
+          <div className="col-span-12 lg:col-span-7 lg:col-start-6">
+            <article data-motion="service-record" className="py-7 sm:py-8">
+              <p className="text-[0.6875rem] font-medium tracking-[0.14em] text-white/58">
+                01
+              </p>
+
+              <div className="mt-3 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-8">
+                <h3 className="max-w-[14ch] text-[1.65rem] font-normal leading-[1.07] tracking-[-0.02em] text-white sm:text-[clamp(1.65rem,2.4vw,2.1rem)] sm:leading-[1.06] [font-family:var(--font-marcellus)]">
+                  Facility design consultation
+                </h3>
+
+                <p className="mt-4 max-w-[430px] text-[0.9375rem] leading-7 text-white/75 lg:mt-0">
+                  Layout, guest flow, capacity, and how the hot and cold spaces
+                  sit against each other. Best before the drawings are locked,
+                  though I&apos;ll tell you honestly what&apos;s still fixable
+                  if the building&apos;s already up.
+                </p>
+              </div>
+            </article>
+
+            <article
+              data-motion="service-record"
+              className="border-t border-white/30 py-7 sm:py-8"
+            >
+              <p className="text-[0.6875rem] font-medium tracking-[0.14em] text-white/58">
+                02
+              </p>
+
+              <div className="mt-3 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-8">
+                <h3 className="max-w-[14ch] text-[1.65rem] font-normal leading-[1.07] tracking-[-0.02em] text-white sm:text-[clamp(1.65rem,2.4vw,2.1rem)] sm:leading-[1.06] [font-family:var(--font-marcellus)]">
                   Sauna master training and education
                 </h3>
-                <p className="mt-5 text-sm leading-6 text-[#DDD8D4]">
+
+                <p className="mt-4 max-w-[430px] text-[0.9375rem] leading-7 text-white/75 lg:mt-0">
                   Rituals, Aufguss, contrast therapy, and the difference between
                   a guest who feels looked after and one who feels processed.
                 </p>
-              </article>
+              </div>
+            </article>
 
-              <article className="rounded-[18px] border border-white/15 bg-white/25 p-7 backdrop-blur-md sm:p-8">
-                <h3 className="text-[1.7rem] leading-[1.15] [font-family:var(--font-marcellus)]">
+            <article
+              data-motion="service-record"
+              className="border-t border-white/30 py-7 sm:py-8"
+            >
+              <p className="text-[0.6875rem] font-medium tracking-[0.14em] text-white/58">
+                03
+              </p>
+
+              <div className="mt-3 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-8">
+                <h3 className="max-w-[14ch] text-[1.65rem] font-normal leading-[1.07] tracking-[-0.02em] text-white sm:text-[clamp(1.65rem,2.4vw,2.1rem)] sm:leading-[1.06] [font-family:var(--font-marcellus)]">
                   Operations and consulting
                 </h3>
-                <p className="mt-5 text-sm leading-6 text-[#DDD8D4]">
+
+                <p className="mt-4 max-w-[430px] text-[0.9375rem] leading-7 text-white/75 lg:mt-0">
                   Systems, staffing, membership, programming, revenue. The
                   unglamorous half of the business, and usually where the money
                   is.
                 </p>
-              </article>
-            </div>
+              </div>
+            </article>
 
-            <div className="mt-10 text-center">
-              <span
-                aria-disabled="true"
-                className="inline-flex cursor-default rounded-[4px] bg-[#F5F1EB] px-6 py-4 text-sm font-medium tracking-[0.03em] text-[#181619]"
-              >
+            <div
+              data-motion="services-cta"
+              className="pt-6 sm:pt-8 lg:pl-[72px]"
+            >
+              <SecondaryCta href="/services">
                 See All Three In Detail
-              </span>
+              </SecondaryCta>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        <section
-          aria-labelledby="contact-heading"
-          className="bg-[#F2EFE9] px-5 py-24 text-center sm:px-8 sm:py-32 lg:px-10 lg:py-36"
-        >
-          <div className="mx-auto max-w-[760px]">
-            <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-[#4F4A46]">
+function ContactSection() {
+  return (
+    <section
+      data-motion-section="contact"
+      aria-labelledby="contact-heading"
+      className="bg-[#F2EFE9] text-[#181619]"
+    >
+      <div className="mx-auto max-w-[1240px] px-5 py-16 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+        <div className="grid grid-cols-12 gap-x-6 gap-y-7 sm:gap-y-10 lg:gap-x-10">
+          <div
+            data-motion="contact-primary"
+            className="col-span-12 lg:col-span-7"
+          >
+            <p className="text-[0.6875rem] font-medium uppercase tracking-[0.18em] text-[#5D5752]">
               START HERE
             </p>
+
             <h2
               id="contact-heading"
-              className="mt-5 text-[clamp(2.4rem,6vw,3.75rem)] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-marcellus)]"
+              className="mt-4 max-w-[13ch] text-[2.2rem] font-normal leading-[1.04] tracking-[-0.03em] sm:text-[clamp(2.3rem,3.9vw,3.2rem)] sm:leading-[1.03] [font-family:var(--font-marcellus)]"
             >
               Tell me what you&apos;re working on.
             </h2>
-            <p className="mx-auto mt-5 max-w-[650px] text-base leading-7 text-[#393538] sm:text-lg sm:leading-8">
+          </div>
+
+          <div
+            data-motion="contact-secondary"
+            className="col-span-12 lg:col-span-4 lg:col-start-9 lg:pt-1"
+          >
+            <p className="max-w-[430px] text-[0.9375rem] leading-7 text-[#514C48] sm:text-base sm:leading-8">
               Fifteen minutes. A few questions first so I turn up knowing
               something about your project instead of asking you to explain it
               twice.
             </p>
-            <span
-              aria-disabled="true"
-              className="mt-7 inline-flex cursor-default rounded-[4px] bg-[#171419] px-6 py-4 text-sm font-medium tracking-[0.03em] text-[#F5F1EB]"
+
+            <PrimaryCta
+              href="/book"
+              tone="dark"
+              className="mt-6 sm:mt-7"
             >
               Book a 15-minute call
-            </span>
+            </PrimaryCta>
           </div>
-        </section>
-      </main>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-      <footer className="bg-[#141217] px-5 py-8 text-[#8F898D] sm:px-8 lg:px-10">
-        <div className="mx-auto flex max-w-[1240px] flex-col gap-4 text-xs tracking-[0.02em] sm:flex-row sm:items-center sm:justify-between">
+function Footer() {
+  return (
+    <footer className="bg-[#141217] text-[#F5F1EB]">
+      <div className="mx-auto max-w-[1240px] px-5 pb-8 pt-11 sm:px-8 sm:pb-10 sm:pt-14 lg:px-10 lg:pt-16">
+        <p className="text-[2.75rem] font-normal leading-none tracking-[-0.03em] sm:text-[clamp(2.75rem,4vw,3.5rem)] [font-family:var(--font-marcellus)]">
+          Omnikaflow
+        </p>
+
+        <div className="mt-8 flex flex-col gap-3 text-xs leading-5 tracking-[0.02em] text-white/55 sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <p>Omnikaflow — Wellness facility consulting</p>
           <p>omnikaflow@gmail.com · Instagram</p>
         </div>
-      </footer>
+      </div>
+    </footer>
+  );
+}
+
+export default function Home() {
+  return (
+    <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-ibm-plex-sans)]">
+      <HomeMotion />
+
+      <main>
+        <HeroSection />
+        <ProofSection />
+        <IntroductionSection />
+        <BackgroundSection />
+        <ServicesSection />
+        <ContactSection />
+      </main>
+
+      <Footer />
     </div>
   );
 }

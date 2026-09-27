@@ -1,4 +1,6 @@
 import { IBM_Plex_Sans, Marcellus } from "next/font/google";
+import SiteHeader from "@/components/layout/SiteHeader";
+import GlobalSmoothScroll from "@/components/motion/GlobalSmoothScroll";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -26,7 +28,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${ibmPlexSans.variable} ${marcellus.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <GlobalSmoothScroll />
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   );
 }
