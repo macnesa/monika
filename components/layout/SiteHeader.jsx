@@ -22,14 +22,14 @@ export default function SiteHeader() {
         <Link
           href="/"
           aria-label="Omnikaflow home"
-          className="text-[1.5rem] leading-none outline-none transition-opacity hover:opacity-75 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:text-[1.75rem] [font-family:var(--font-marcellus)]"
+          className="text-[1.5rem] leading-none outline-none transition-opacity hover:opacity-75 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:text-[1.75rem] [font-family:var(--font-tiempos-headline)]"
         >
           Omnikaflow
         </Link>
 
         <nav
           aria-label="Primary navigation"
-          className="order-3 flex basis-full items-center justify-start gap-7 text-[0.6875rem] leading-none tracking-[0.02em] text-white/70 sm:order-none sm:basis-auto sm:justify-center sm:gap-8"
+          className="order-3 flex basis-full items-center justify-start gap-7 text-[0.6875rem] font-medium leading-none tracking-[0.02em] text-white/70 sm:order-none sm:basis-auto sm:justify-center sm:gap-8"
         >
           <Link
             href="/"

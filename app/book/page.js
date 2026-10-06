@@ -41,7 +41,7 @@ function BookHero() {
             <h1
               id="booking-hero-heading"
               data-motion="book-hero-title"
-              className="mt-5 max-w-[760px] text-[clamp(3.4rem,7.4vw,6.4rem)] font-normal leading-[0.96] tracking-[-0.035em] [font-family:var(--font-marcellus)]"
+              className="mt-5 max-w-[760px] text-[clamp(3.4rem,7.4vw,6.4rem)] font-medium leading-[0.96] tracking-[-0.035em] [font-family:var(--font-abc-diatype)]"
             >
               Book a 15-minute call
             </h1>
@@ -76,7 +76,7 @@ function BookingInfo() {
       className="border-y border-black/15"
     >
       <div className="border-b border-black/15 py-8 sm:py-9">
-        <h2 className="text-[1.75rem] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-marcellus)] sm:text-[2rem]">
+        <h2 className="text-[1.75rem] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-abc-diatype)] sm:text-[2rem]">
           Before the call
         </h2>
 
@@ -87,7 +87,7 @@ function BookingInfo() {
       </div>
 
       <div className="border-b border-black/15 py-8 sm:py-9">
-        <h2 className="text-[1.75rem] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-marcellus)] sm:text-[2rem]">
+        <h2 className="text-[1.75rem] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-abc-diatype)] sm:text-[2rem]">
           On the call
         </h2>
 
@@ -97,7 +97,7 @@ function BookingInfo() {
       </div>
 
       <div className="py-8 sm:py-9">
-        <h2 className="text-[1.75rem] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-marcellus)] sm:text-[2rem]">
+        <h2 className="text-[1.75rem] font-normal leading-[1.08] tracking-[-0.02em] [font-family:var(--font-abc-diatype)] sm:text-[2rem]">
           Rather email?
         </h2>
 
@@ -147,7 +147,7 @@ function Footer() {
   return (
     <footer className="bg-[#141217] text-[#F5F1EB]">
       <div className="mx-auto max-w-[1240px] px-5 pb-8 pt-11 sm:px-8 sm:pb-10 sm:pt-14 lg:px-10 lg:pt-16">
-        <p className="text-[2.75rem] font-normal leading-none tracking-[-0.03em] sm:text-[clamp(2.75rem,4vw,3.5rem)] [font-family:var(--font-marcellus)]">
+        <p className="text-[2.75rem] font-normal leading-none tracking-[-0.03em] sm:text-[clamp(2.75rem,4vw,3.5rem)] [font-family:var(--font-tiempos-headline)]">
           Omnikaflow
         </p>
 
@@ -171,7 +171,7 @@ function Footer() {
 
 export default function BookPage() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-ibm-plex-sans)]">
+    <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-abc-diatype)]">
       <main>
         <BookHero />
         <BookingSection />

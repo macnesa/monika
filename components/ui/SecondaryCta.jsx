@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ArrowUpRightIcon from "@/components/ui/ArrowUpRightIcon";
 
 export default function SecondaryCta({
   href,
@@ -15,7 +16,7 @@ export default function SecondaryCta({
         aria-hidden="true"
         className="shrink-0 text-[0.9375rem] leading-none motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:group-hover:translate-x-0.5 motion-safe:group-focus-visible:translate-x-0.5"
       >
-        ↗
+        <ArrowUpRightIcon size={16} />
       </span>
     </Link>
   );

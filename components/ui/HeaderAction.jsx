@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ArrowUpRightIcon from "./ArrowUpRightIcon";
 
 export default function HeaderAction({
   href,
@@ -15,7 +16,7 @@ export default function HeaderAction({
         aria-hidden="true"
         className="shrink-0 text-[0.8125rem] leading-none motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out motion-safe:group-hover:translate-x-0.5 motion-safe:group-focus-visible:translate-x-0.5"
       >
-        ↗
+        <ArrowUpRightIcon size={14} />
       </span>
     </Link>
   );

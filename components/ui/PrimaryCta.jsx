@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ArrowUpRightIcon from "./ArrowUpRightIcon";
 
 const toneStyles = {
   light: {
@@ -38,7 +39,7 @@ export default function PrimaryCta({
           aria-hidden="true"
           className="shrink-0 text-[0.9375rem] leading-none"
         >
-          ↗
+          <ArrowUpRightIcon size={16} />
         </span>
       </span>
 
@@ -50,7 +51,7 @@ export default function PrimaryCta({
           <span>{children}</span>
 
           <span className="shrink-0 text-[0.9375rem] leading-none">
-            ↗
+            <ArrowUpRightIcon size={16} />
           </span>
         </span>
       </span>

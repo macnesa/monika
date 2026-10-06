@@ -92,9 +92,9 @@ function TrainingContent() {
       <div className="border-y border-[#C8BEB4] bg-[#E5DDD3] p-[6px] sm:p-2">
         <img
           src="/images/services/training.webp"
-          alt="Guests stretching during a sauna session"
-          width="1080"
-          height="1346"
+          alt="A sauna master leading a guided sauna session with guests"
+          width="1920"
+          height="1577"
           loading="lazy"
           className="aspect-[16/9] w-full rounded-[2px] object-cover object-center"
         />
@@ -110,7 +110,7 @@ function TrainingContent() {
 
         <div className="mt-10 border-t border-[#C8BEB4] pt-8 sm:mt-12 sm:pt-10">
           <div className="grid gap-7 md:grid-cols-[minmax(220px,0.72fr)_minmax(0,1.28fr)] md:gap-12 lg:gap-16">
-            <h3 className="max-w-[12ch] text-[1.75rem] font-normal leading-[1.08] tracking-[-0.02em] text-[#181619] sm:text-[2rem] [font-family:var(--font-marcellus)]">
+            <h3 className="max-w-[12ch] text-[1.75rem] font-medium leading-[1.08] tracking-[-0.02em] text-[#181619] sm:text-[2rem] [font-family:var(--font-abc-diatype)]">
               What the training covers
             </h3>
 
@@ -197,7 +197,7 @@ function OperationsContent() {
         <div className="mt-10 border-b border-[#C8BEB4] sm:mt-12">
           <details className="group border-t border-[#C8BEB4]">
             <summary className="service-accordion-summary flex cursor-pointer list-none items-center justify-between gap-6 py-6 outline-none focus-visible:ring-2 focus-visible:ring-[#181619] focus-visible:ring-offset-4 focus-visible:ring-offset-[#EEE8E0] sm:py-7">
-              <span className="text-[1.35rem] font-normal leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-marcellus)]">
+              <span className="text-[1.35rem] font-medium leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-abc-diatype)]">
                 Operational systems
               </span>
 
@@ -219,7 +219,7 @@ function OperationsContent() {
 
           <details className="group border-t border-[#C8BEB4]">
             <summary className="service-accordion-summary flex cursor-pointer list-none items-center justify-between gap-6 py-6 outline-none focus-visible:ring-2 focus-visible:ring-[#181619] focus-visible:ring-offset-4 focus-visible:ring-offset-[#EEE8E0] sm:py-7">
-              <span className="text-[1.35rem] font-normal leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-marcellus)]">
+              <span className="text-[1.35rem] font-medium leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-abc-diatype)]">
                 Retention and membership
               </span>
 
@@ -244,7 +244,7 @@ function OperationsContent() {
 
           <details className="group border-t border-[#C8BEB4]">
             <summary className="service-accordion-summary flex cursor-pointer list-none items-center justify-between gap-6 py-6 outline-none focus-visible:ring-2 focus-visible:ring-[#181619] focus-visible:ring-offset-4 focus-visible:ring-offset-[#EEE8E0] sm:py-7">
-              <span className="text-[1.35rem] font-normal leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-marcellus)]">
+              <span className="text-[1.35rem] font-medium leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-abc-diatype)]">
                 Programming
               </span>
 
@@ -265,7 +265,7 @@ function OperationsContent() {
 
           <details className="group border-t border-[#C8BEB4]">
             <summary className="service-accordion-summary flex cursor-pointer list-none items-center justify-between gap-6 py-6 outline-none focus-visible:ring-2 focus-visible:ring-[#181619] focus-visible:ring-offset-4 focus-visible:ring-offset-[#EEE8E0] sm:py-7">
-              <span className="text-[1.35rem] font-normal leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-marcellus)]">
+              <span className="text-[1.35rem] font-medium leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-abc-diatype)]">
                 Manager and staff development
               </span>
 
@@ -287,7 +287,7 @@ function OperationsContent() {
 
           <details className="group border-t border-[#C8BEB4]">
             <summary className="service-accordion-summary flex cursor-pointer list-none items-center justify-between gap-6 py-6 outline-none focus-visible:ring-2 focus-visible:ring-[#181619] focus-visible:ring-offset-4 focus-visible:ring-offset-[#EEE8E0] sm:py-7">
-              <span className="text-[1.35rem] font-normal leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-marcellus)]">
+              <span className="text-[1.35rem] font-medium leading-tight tracking-[-0.015em] text-[#181619] sm:text-[1.65rem] [font-family:var(--font-abc-diatype)]">
                 Revenue
               </span>
 
@@ -349,7 +349,7 @@ function ServiceTrigger({
           </span>
 
           <div className="mt-5 grid gap-5 md:grid-cols-[minmax(0,1.8fr)_minmax(260px,1fr)] md:items-end md:gap-x-12 lg:grid-cols-[minmax(0,1.9fr)_minmax(300px,1fr)] lg:gap-x-16">
-            <h2 className="max-w-[18ch] text-[clamp(2.15rem,4.7vw,3.4rem)] font-normal leading-[1.06] tracking-[-0.025em] text-[#181619] [font-family:var(--font-marcellus)]">
+            <h2 className="max-w-[18ch] text-[clamp(2.15rem,4.7vw,3.4rem)] font-medium leading-[1.06] tracking-[-0.025em] text-[#181619] [font-family:var(--font-abc-diatype)]">
               {service.title}
             </h2>
 
@@ -364,7 +364,7 @@ function ServiceTrigger({
             {service.number}
           </span>
 
-          <h2 className="max-w-[30ch] text-[1.05rem] font-normal leading-[1.2] tracking-[-0.012em] text-[#5F5954] transition-colors duration-300 group-hover:text-[#181619] sm:text-[1.125rem] [font-family:var(--font-marcellus)] motion-reduce:transition-none">
+          <h2 className="max-w-[30ch] text-[1.05rem] font-medium leading-[1.2] tracking-[-0.012em] text-[#5F5954] transition-colors duration-300 group-hover:text-[#181619] sm:text-[1.125rem] [font-family:var(--font-abc-diatype)] motion-reduce:transition-none">
             {service.title}
           </h2>
         </div>

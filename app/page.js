@@ -44,10 +44,10 @@ function HeroSection() {
             <h1
               data-motion="hero-title"
               id="hero-heading"
-              className="mt-5 max-w-[800px] text-[2.5rem] font-normal leading-[1.04] tracking-[-0.03em] sm:mt-6 sm:text-[clamp(2.75rem,4.8vw,4rem)] sm:leading-[1.03] [font-family:var(--font-marcellus)]"
+              className="mt-5 max-w-[800px] text-[2.875rem] font-medium leading-[0.98] tracking-[-0.04em] sm:mt-6 sm:text-[clamp(3.25rem,5.4vw,5rem)] [font-family:var(--font-abc-diatype)]"
             >
-              I started on reception at eighteen. A few years later I was
-              running the two largest wellness centres in the group.
+              A few years later, I was running the two largest wellness
+              centres in the group.
             </h1>
           </div>
         </div>
@@ -86,7 +86,7 @@ function ProofSection() {
       <div className="mx-auto max-w-[1240px] px-5 py-11 sm:px-8 sm:py-14 lg:px-10 lg:py-16">
         <div className="grid grid-cols-2 gap-x-8 gap-y-9 lg:grid-cols-4 lg:gap-x-12">
           <div>
-            <p className="text-[2rem] leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-marcellus)]">
+            <p className="text-[2rem] font-medium leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-abc-diatype)]">
               8,000 m²
             </p>
             <p className="mt-3 text-[0.6875rem] uppercase leading-5 tracking-[0.1em] text-white/60">
@@ -95,7 +95,7 @@ function ProofSection() {
           </div>
 
           <div>
-            <p className="text-[2rem] leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-marcellus)]">
+            <p className="text-[2rem] font-medium leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-abc-diatype)]">
               300+
             </p>
             <p className="mt-3 text-[0.6875rem] uppercase leading-5 tracking-[0.1em] text-white/60">
@@ -104,7 +104,7 @@ function ProofSection() {
           </div>
 
           <div>
-            <p className="text-[2rem] leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-marcellus)]">
+            <p className="text-[2rem] font-medium leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-abc-diatype)]">
               $138M
             </p>
             <p className="mt-3 text-[0.6875rem] uppercase leading-5 tracking-[0.1em] text-white/60">
@@ -113,7 +113,7 @@ function ProofSection() {
           </div>
 
           <div>
-            <p className="text-[2rem] leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-marcellus)]">
+            <p className="text-[2rem] font-medium leading-none tracking-[-0.025em] sm:text-[2.3rem] [font-family:var(--font-abc-diatype)]">
               3
             </p>
             <p className="mt-3 text-[0.6875rem] uppercase leading-5 tracking-[0.1em] text-white/60">
@@ -145,9 +145,9 @@ function IntroductionSection() {
 
             <h2
               id="introduction-heading"
-              className="mt-4 max-w-[17ch] text-[2.15rem] font-normal leading-[1.06] tracking-[-0.025em] sm:text-[clamp(2.2rem,3.5vw,2.9rem)] [font-family:var(--font-marcellus)]"
+              className="mt-4 max-w-[17ch] text-[2.25rem] font-normal leading-[1] tracking-[-0.03em] sm:text-[clamp(2.5rem,3.9vw,3.5rem)] [font-family:var(--font-abc-diatype)]"
             >
-              I started on reception at eighteen and never left the industry.
+              I started on wellness reception at eighteen and never left the industry.
             </h2>
           </div>
 
@@ -226,7 +226,7 @@ function BackgroundSection() {
 
               <h2
                 id="background-heading"
-                className="mt-4 max-w-[12ch] text-[2.2rem] font-normal leading-[1.04] tracking-[-0.03em] sm:text-[clamp(2.25rem,3.7vw,3rem)] sm:leading-[1.03] [font-family:var(--font-marcellus)]"
+                className="mt-4 max-w-[12ch] text-[2.3rem] font-normal leading-[1] tracking-[-0.035em] sm:text-[clamp(2.65rem,4.2vw,3.65rem)] [font-family:var(--font-abc-diatype)]"
               >
                 <span className="block text-[#514B47]">
                   Fourteen years,
@@ -244,12 +244,12 @@ function BackgroundSection() {
                   01
                 </p>
 
-                <h3 className="mt-3 font-normal">
+                <h3 className="mt-3 font-medium">
                   <span className="block text-[0.75rem] font-medium leading-none tracking-[0.08em] text-[#665F5A]">
                     Infinit,
                   </span>
 
-                  <span className="mt-2 block text-[1.85rem] leading-[1.04] tracking-[-0.025em] text-[#181619] sm:text-[2.15rem] [font-family:var(--font-marcellus)]">
+                  <span className="mt-2 block text-[2rem] leading-[1] tracking-[-0.03em] text-[#181619] sm:text-[clamp(2.1rem,2.8vw,2.6rem)] [font-family:var(--font-abc-diatype)]">
                     Czech Republic
                   </span>
                 </h3>
@@ -260,7 +260,7 @@ function BackgroundSection() {
                   </span>{" "}
                   I ran the group&apos;s largest branch:{" "}
                   <span className="font-medium text-[#292527]">8,000 m²</span>,
-                  two saunas, four pools, cold plunges and treatment rooms
+                  twelve saunas, four pools, cold plunges and treatment rooms
                   alongside a second site, with{" "}
                   <span className="font-medium text-[#292527]">
                     around 300 people across both teams
@@ -277,12 +277,12 @@ function BackgroundSection() {
                   02
                 </p>
 
-                <h3 className="mt-3 font-normal">
+                <h3 className="mt-3 font-medium">
                   <span className="block text-[0.75rem] font-medium leading-none tracking-[0.08em] text-[#665F5A]">
                     Mindzero,
                   </span>
 
-                  <span className="mt-2 block text-[1.85rem] leading-[1.04] tracking-[-0.025em] text-[#181619] sm:text-[2.15rem] [font-family:var(--font-marcellus)]">
+                  <span className="mt-2 block text-[2rem] leading-[1] tracking-[-0.03em] text-[#181619] sm:text-[clamp(2.1rem,2.8vw,2.6rem)] [font-family:var(--font-abc-diatype)]">
                     United States
                   </span>
                 </h3>
@@ -314,14 +314,15 @@ function BackgroundSection() {
                 </p>
 
                 <h3 className="mt-3">
-                  <span className="block text-[1.85rem] font-normal leading-[1.04] tracking-[-0.025em] text-[#181619] sm:text-[2.15rem] [font-family:var(--font-marcellus)]">
+                  <span className="block text-[2rem] font-medium leading-[1] tracking-[-0.03em] text-[#181619] sm:text-[clamp(2.1rem,2.8vw,2.6rem)] [font-family:var(--font-abc-diatype)]">
                     Indonesia
                   </span>
                 </h3>
 
                 <p className="mt-4 max-w-[650px] text-[0.9375rem] leading-7 text-[#5D5752] sm:mt-5 sm:text-base sm:leading-8">
-                  I consult here now. Facility projects, operations work, and
-                  staff training, including{" "}
+                  I consult here now on facility projects, operations work,
+                  and staff training. I&apos;ve trained teams in Indonesia, most
+                  recently{" "}
                   <span className="font-medium text-[#292527]">
                     six in-house saunamasters
                   </span>{" "}
@@ -382,7 +383,7 @@ function ServicesSection() {
 
             <h2
               id="services-heading"
-              className="mt-4 max-w-[13ch] text-[2.2rem] font-normal leading-[1.04] tracking-[-0.03em] sm:text-[clamp(2.25rem,3.7vw,3rem)] sm:leading-[1.03] [font-family:var(--font-marcellus)]"
+              className="mt-4 max-w-[13ch] text-[2.3rem] font-normal leading-[1] tracking-[-0.035em] sm:text-[clamp(2.55rem,4.2vw,3.6rem)] [font-family:var(--font-abc-diatype)]"
             >
               Three services, and people rarely need just one.
             </h2>
@@ -401,7 +402,7 @@ function ServicesSection() {
               </p>
 
               <div className="mt-3 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-8">
-                <h3 className="max-w-[14ch] text-[1.65rem] font-normal leading-[1.07] tracking-[-0.02em] text-white sm:text-[clamp(1.65rem,2.4vw,2.1rem)] sm:leading-[1.06] [font-family:var(--font-marcellus)]">
+                <h3 className="max-w-[14ch] text-[1.75rem] font-medium leading-[1.02] tracking-[-0.025em] text-white sm:text-[clamp(1.9rem,2.7vw,2.45rem)] [font-family:var(--font-abc-diatype)]">
                   Facility design consultation
                 </h3>
 
@@ -423,7 +424,7 @@ function ServicesSection() {
               </p>
 
               <div className="mt-3 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-8">
-                <h3 className="max-w-[14ch] text-[1.65rem] font-normal leading-[1.07] tracking-[-0.02em] text-white sm:text-[clamp(1.65rem,2.4vw,2.1rem)] sm:leading-[1.06] [font-family:var(--font-marcellus)]">
+                <h3 className="max-w-[14ch] text-[1.75rem] font-medium leading-[1.02] tracking-[-0.025em] text-white sm:text-[clamp(1.9rem,2.7vw,2.45rem)] [font-family:var(--font-abc-diatype)]">
                   Sauna master training and education
                 </h3>
 
@@ -443,7 +444,7 @@ function ServicesSection() {
               </p>
 
               <div className="mt-3 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-8">
-                <h3 className="max-w-[14ch] text-[1.65rem] font-normal leading-[1.07] tracking-[-0.02em] text-white sm:text-[clamp(1.65rem,2.4vw,2.1rem)] sm:leading-[1.06] [font-family:var(--font-marcellus)]">
+                <h3 className="max-w-[14ch] text-[1.75rem] font-medium leading-[1.02] tracking-[-0.025em] text-white sm:text-[clamp(1.9rem,2.7vw,2.45rem)] [font-family:var(--font-abc-diatype)]">
                   Operations and consulting
                 </h3>
 
@@ -489,7 +490,7 @@ function ContactSection() {
 
             <h2
               id="contact-heading"
-              className="mt-4 max-w-[13ch] text-[2.2rem] font-normal leading-[1.04] tracking-[-0.03em] sm:text-[clamp(2.3rem,3.9vw,3.2rem)] sm:leading-[1.03] [font-family:var(--font-marcellus)]"
+              className="mt-4 max-w-[13ch] text-[2.35rem] font-normal leading-[1] tracking-[-0.035em] sm:text-[clamp(2.6rem,4.5vw,3.9rem)] [font-family:var(--font-abc-diatype)]"
             >
               Tell me what you&apos;re working on.
             </h2>
@@ -523,7 +524,7 @@ function Footer() {
   return (
     <footer className="bg-[#141217] text-[#F5F1EB]">
       <div className="mx-auto max-w-[1240px] px-5 pb-8 pt-11 sm:px-8 sm:pb-10 sm:pt-14 lg:px-10 lg:pt-16">
-        <p className="text-[2.75rem] font-normal leading-none tracking-[-0.03em] sm:text-[clamp(2.75rem,4vw,3.5rem)] [font-family:var(--font-marcellus)]">
+        <p className="text-[2.75rem] font-normal leading-none tracking-[-0.03em] sm:text-[clamp(2.75rem,4vw,3.5rem)] [font-family:var(--font-tiempos-headline)]">
           Omnikaflow
         </p>
 
@@ -538,7 +539,7 @@ function Footer() {
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-ibm-plex-sans)]">
+    <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-abc-diatype)]">
       <HomeMotion />
 
       <main>

@@ -45,7 +45,7 @@ function ServicesHero() {
             <h1
               data-motion="hero-title"
               id="services-hero-heading"
-              className="mt-5 max-w-[10ch] text-[clamp(3rem,8vw,5.25rem)] font-normal leading-[0.98] tracking-[-0.035em] sm:mt-6 [font-family:var(--font-marcellus)]"
+              className="mt-5 max-w-[10ch] text-[clamp(3rem,8vw,5.25rem)] font-medium leading-[0.98] tracking-[-0.035em] sm:mt-6 [font-family:var(--font-abc-diatype)]"
             >
               Design, training, operations.
             </h1>
@@ -56,9 +56,9 @@ function ServicesHero() {
             className="col-span-12 max-w-[540px] lg:col-span-4 lg:col-start-9 lg:self-end"
           >
             <p className="text-[0.9375rem] leading-7 text-white/80 sm:text-base sm:leading-8">
-              I started on reception at eighteen. A few years later I was
-              running the two largest wellness centres in the group. Now I work
-              on other people&apos;s facilities.
+              A few years later, I was running the two largest wellness
+              centres in the group. Now I work on other people&apos;s facilities.
+              I work worldwide, online and on site.
             </p>
 
             <div className="mt-7">
@@ -106,7 +106,7 @@ function ContactSection() {
           >
             <h2
               id="services-contact-heading"
-              className="max-w-[11ch] text-[clamp(2.5rem,5vw,4.25rem)] font-normal leading-[1.02] tracking-[-0.03em] [font-family:var(--font-marcellus)]"
+              className="max-w-[11ch] text-[clamp(2.5rem,5vw,4.25rem)] font-normal leading-[1.02] tracking-[-0.03em] [font-family:var(--font-abc-diatype)]"
             >
               Still not sure?
             </h2>
@@ -135,7 +135,7 @@ function Footer() {
   return (
     <footer className="bg-[#141217] text-[#F5F1EB]">
       <div className="mx-auto max-w-[1240px] px-5 pb-8 pt-11 sm:px-8 sm:pb-10 sm:pt-14 lg:px-10 lg:pt-16">
-        <p className="text-[2.75rem] font-normal leading-none tracking-[-0.03em] sm:text-[clamp(2.75rem,4vw,3.5rem)] [font-family:var(--font-marcellus)]">
+        <p className="text-[2.75rem] font-normal leading-none tracking-[-0.03em] sm:text-[clamp(2.75rem,4vw,3.5rem)] [font-family:var(--font-tiempos-headline)]">
           Omnikaflow
         </p>
 
@@ -150,7 +150,7 @@ function Footer() {
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-ibm-plex-sans)]">
+    <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-abc-diatype)]">
       <main>
         <ServicesHero />
         <ServicesSection />
