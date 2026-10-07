@@ -58,7 +58,7 @@ function BookHero() {
 
             <a
               href="#booking"
-              className="mt-7 inline-flex min-h-12 items-center justify-center rounded-[2px] bg-[#F5F1EB] px-6 py-3 text-[0.75rem] font-medium leading-none tracking-[0.02em] text-[#181619] outline-none transition-colors duration-200 hover:bg-white focus-visible:ring-2 focus-visible:ring-[#F5F1EB] focus-visible:ring-offset-4 focus-visible:ring-offset-black/60"
+              className="mt-7 inline-flex min-h-12 items-center justify-center rounded-[16px] bg-[#F5F1EB] px-6 py-3 text-[0.75rem] font-medium leading-none tracking-[0.02em] text-[#181619] outline-none transition-colors duration-[200ms] ease-out hover:bg-white focus-visible:ring-2 focus-visible:ring-[#F5F1EB] focus-visible:ring-offset-4 focus-visible:ring-offset-black/60"
             >
               Pick a time
             </a>
