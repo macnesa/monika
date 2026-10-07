@@ -56,9 +56,8 @@ function ServicesHero() {
             className="col-span-12 max-w-[540px] lg:col-span-4 lg:col-start-9 lg:self-end"
           >
             <p className="text-[0.9375rem] leading-7 text-white/80 sm:text-base sm:leading-8">
-              A few years later, I was running the two largest wellness
-              centres in the group. Now I work on other people&apos;s facilities.
-              I work worldwide, online and on site.
+              Now I work on other people&apos;s facilities. I work worldwide,
+              online and on site.
             </p>
 
             <div className="mt-7">

@@ -9,7 +9,7 @@ export default function HeaderAction({
   return (
     <Link
       href={href}
-      className={`group inline-flex min-h-[40px] items-center gap-3 rounded-[2px] border border-[#F5F1EB] bg-[#F5F1EB] px-4 py-2.5 text-[0.6875rem] font-medium leading-none tracking-[0.035em] text-[#181619] outline-none transition-colors duration-200 hover:border-white hover:bg-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black motion-reduce:transition-none ${className}`}
+      className={`group inline-flex min-h-[40px] items-center gap-3 rounded-[12px] border border-[#F5F1EB] bg-[#F5F1EB] px-4 py-2.5 text-[0.75rem] font-medium leading-none tracking-[0.015em] text-[#181619] outline-none transition-colors duration-200 hover:border-white hover:bg-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black motion-reduce:transition-none ${className}`}
     >
       <span>{children}</span>
       <span

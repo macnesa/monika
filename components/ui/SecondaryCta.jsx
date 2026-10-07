@@ -9,7 +9,7 @@ export default function SecondaryCta({
   return (
     <Link
       href={href}
-      className={`group inline-flex min-h-[44px] items-center gap-4 rounded-[2px] border border-white/50 px-4 py-3 text-[0.75rem] font-medium leading-none tracking-[0.02em] text-white outline-none transition-colors duration-200 hover:border-white focus-visible:border-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black motion-reduce:transition-none ${className}`}
+      className={`group inline-flex min-h-[44px] items-center gap-4 rounded-[14px] border border-white/50 px-4 py-3 text-[0.75rem] font-medium leading-none tracking-[0.01em] text-white outline-none transition-colors duration-200 hover:border-white focus-visible:border-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-black motion-reduce:transition-none ${className}`}
     >
       <span>{children}</span>
       <span

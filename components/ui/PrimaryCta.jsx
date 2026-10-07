@@ -25,7 +25,7 @@ export default function PrimaryCta({
   return (
     <Link
       href={href}
-      className={`group relative inline-flex min-h-[50px] items-center overflow-hidden rounded-[2px] border px-5 text-[0.75rem] font-medium leading-none tracking-[0.02em] outline-none focus-visible:ring-2 focus-visible:ring-offset-4 ${styles.link} ${className}`}
+      className={`group relative inline-flex min-h-[50px] items-center overflow-hidden rounded-[16px] border px-5 text-[0.8125rem] font-medium leading-none tracking-[0.01em] outline-none focus-visible:ring-2 focus-visible:ring-offset-4 ${styles.link} ${className}`}
     >
       <span
         aria-hidden="true"

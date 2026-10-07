@@ -59,7 +59,7 @@ function HeroSection() {
           >
             Fourteen years of managing and launching wellness facilities in
             Europe and America taught me what works. Facility design, staff
-            training, operations and contrast therapy guidance: that's where I
+            training, operations and contrast therapy guidance: that&apos;s where I
             can help you most.
           </p>
 
