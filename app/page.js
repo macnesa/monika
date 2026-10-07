@@ -46,8 +46,8 @@ function HeroSection() {
               id="hero-heading"
               className="mt-5 max-w-[800px] text-[2.875rem] font-medium leading-[0.98] tracking-[-0.04em] sm:mt-6 sm:text-[clamp(3.25rem,5.4vw,5rem)] [font-family:var(--font-abc-diatype)]"
             >
-              A few years later, I was running the two largest wellness
-              centres in the group.
+              Wellness spaces that work for guests, teams and owners, not just
+              on paper.
             </h1>
           </div>
         </div>
@@ -57,8 +57,10 @@ function HeroSection() {
             data-motion="hero-copy"
             className="col-span-12 max-w-[570px] text-[0.9375rem] leading-7 text-white/80 sm:text-base lg:col-span-6"
           >
-            Now I work on other people&apos;s facilities: the layout, the team,
-            and how the place runs once the doors open.
+            Fourteen years of managing and launching wellness facilities in
+            Europe and America taught me what works. Facility design, staff
+            training, operations and contrast therapy guidance: that's where I
+            can help you most.
           </p>
 
           <div className="col-span-12 flex items-start lg:col-span-4 lg:col-start-9 lg:justify-end">
