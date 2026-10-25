@@ -130,23 +130,6 @@ function ContactSection() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="bg-[#141217] text-[#F5F1EB]">
-      <div className="mx-auto max-w-[1240px] px-5 pb-8 pt-11 sm:px-8 sm:pb-10 sm:pt-14 lg:px-10 lg:pt-16">
-        <p className="text-[2.75rem] font-normal leading-none tracking-[-0.03em] sm:text-[clamp(2.75rem,4vw,3.5rem)] [font-family:var(--font-tiempos-headline)]">
-          Omnikaflow
-        </p>
-
-        <div className="mt-8 flex flex-col gap-3 text-xs leading-5 tracking-[0.02em] text-white/55 sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-          <p>Omnikaflow — Wellness facility consulting</p>
-          <p>omnikaflow@gmail.com · Instagram</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 export default function ServicesPage() {
   return (
     <div className="min-h-screen overflow-x-clip bg-[#F2EFE9] text-[#181619] [font-family:var(--font-abc-diatype)]">
@@ -155,8 +138,6 @@ export default function ServicesPage() {
         <ServicesSection />
         <ContactSection />
       </main>
-
-      <Footer />
 
       <ServicesMotion />
     </div>

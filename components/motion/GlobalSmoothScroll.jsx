@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 import { gsap, ScrollTrigger } from "@/lib/motion/gsap";
@@ -9,6 +10,8 @@ const FINE_POINTER_QUERY = "(hover: hover) and (pointer: fine)";
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 export default function GlobalSmoothScroll() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const finePointer = window.matchMedia(FINE_POINTER_QUERY);
     const reducedMotion = window.matchMedia(REDUCED_MOTION_QUERY);
@@ -43,7 +46,13 @@ export default function GlobalSmoothScroll() {
       }
 
       lenis = new Lenis({
+        // The body grows with page content; html is constrained by h-full.
+        content: document.body,
+        // Route commits and expanding panels can outpace ResizeObserver.
+        // Read the current document limit instead of a cached page height.
+        naiveDimensions: true,
         anchors: true,
+        stopInertiaOnNavigate: true,
         autoRaf: false,
         lerp: 0.1,
         respectReducedMotion: true,
@@ -86,7 +95,7 @@ export default function GlobalSmoothScroll() {
 
       stop();
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }

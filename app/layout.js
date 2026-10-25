@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
 import GlobalSmoothScroll from "@/components/motion/GlobalSmoothScroll";
 import "./globals.css";
 
@@ -45,6 +46,7 @@ export default function RootLayout({ children }) {
         <GlobalSmoothScroll />
         <SiteHeader />
         {children}
+        <SiteFooter />
         <Analytics />
       </body>
     </html>
