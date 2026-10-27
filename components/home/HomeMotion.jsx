@@ -3,6 +3,7 @@
 import { useLayoutEffect } from "react";
 
 import { gsap, ScrollTrigger } from "@/lib/motion/gsap";
+import { editorialRoute } from "@/lib/motion/editorial";
 
 const MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
 
@@ -23,6 +24,17 @@ const SERVICES_DEPTH_QUERY =
 
 export default function HomeMotion() {
   useLayoutEffect(() => {
+    const root = document.querySelector('[data-motion-section="hero"]')?.closest("main");
+    if (!root) return;
+    const stopTypography = editorialRoute(root, [
+      { scope: '[data-motion-section="hero"]', heading: '[data-motion="hero-title"]', support: '[data-motion="hero-copy"]', action: '[data-motion="hero-cta"]', eyebrow: '[data-motion="hero-eyebrow"]', hero: true },
+      { scope: '[data-motion-section="introduction"]', heading: "h2", support: '[data-motion="intro-copy"]', display: false },
+      { scope: '[data-motion-section="background"]', heading: "h2", display: false },
+      { scope: '[data-motion="career-record"]', heading: "h3 > span:last-child", support: "p:last-of-type", display: false },
+      { scope: '[data-motion="services-intro"]', heading: "h2", support: "p:last-child", display: false },
+      { scope: '[data-motion="service-record"]', heading: "h3", support: "div > p", display: false },
+      { scope: '[data-motion-section="contact"]', heading: "h2", support: '[data-motion="contact-secondary"] > p', action: '[data-motion="contact-secondary"] a', display: false },
+    ]);
     const media = gsap.matchMedia();
 
     /*
@@ -32,304 +44,10 @@ export default function HomeMotion() {
      */
 
     media.add(MOTION_QUERY, () => {
-      /*
-       * HERO — entrance
-       */
-
-      const heroSection = document.querySelector(
-        '[data-motion-section="hero"]',
-      );
-
-      const heroImage = heroSection?.querySelector(
-        '[data-motion="hero-image"]',
-      );
-
-      const heroEyebrow = heroSection?.querySelector(
-        '[data-motion="hero-eyebrow"]',
-      );
-
-      const heroTitle = heroSection?.querySelector(
-        '[data-motion="hero-title"]',
-      );
-
-      const heroCopy = heroSection?.querySelector(
-        '[data-motion="hero-copy"]',
-      );
-
-      const heroCta = heroSection?.querySelector(
-        '[data-motion="hero-cta"]',
-      );
-
-      if (
-        heroImage &&
-        heroEyebrow &&
-        heroTitle &&
-        heroCopy &&
-        heroCta
-      ) {
-        gsap
-          .timeline()
-          .fromTo(
-            heroImage,
-            {
-              scale: 1.025,
-            },
-            {
-              scale: 1,
-              duration: 1.6,
-              ease: "power2.out",
-              clearProps: "transform",
-            },
-            0,
-          )
-          .fromTo(
-            heroEyebrow,
-            {
-              autoAlpha: 0,
-              y: 11,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.5,
-              ease: "power2.out",
-              clearProps: "opacity,visibility,transform",
-            },
-            0.1,
-          )
-          .fromTo(
-            heroTitle,
-            {
-              autoAlpha: 0,
-              y: 22,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.8,
-              ease: "power3.out",
-              clearProps: "opacity,visibility,transform",
-            },
-            0.18,
-          )
-          .fromTo(
-            heroCopy,
-            {
-              autoAlpha: 0,
-              y: 14,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.6,
-              ease: "power3.out",
-              clearProps: "opacity,visibility,transform",
-            },
-            0.36,
-          )
-          .fromTo(
-            heroCta,
-            {
-              autoAlpha: 0,
-              y: 12,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.55,
-              ease: "power3.out",
-              clearProps: "opacity,visibility,transform",
-            },
-            0.46,
-          );
-      }
-
-      /*
-       * BACKGROUND
-       *
-       * Quiet evidence-led motion.
-       */
-
-      gsap.utils
-        .toArray('[data-motion="career-record"]')
-        .forEach((record) => {
-          gsap.fromTo(
-            record,
-            {
-              autoAlpha: 0,
-              y: 10,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.6,
-              ease: "power2.out",
-              clearProps: "opacity,visibility,transform",
-
-              scrollTrigger: {
-                trigger: record,
-                start: "top 86%",
-                once: true,
-              },
-            },
-          );
-        });
-
-      /*
-       * SERVICES
-       */
-
-      const servicesSection = document.querySelector(
-        '[data-motion-section="services"]',
-      );
-
-      const servicesIntro = servicesSection?.querySelector(
-        '[data-motion="services-intro"]',
-      );
-
-      const serviceRecords = servicesSection
-        ? gsap.utils.toArray(
-            servicesSection.querySelectorAll(
-              '[data-motion="service-record"]',
-            ),
-          )
-        : [];
-
-      const servicesCta = servicesSection?.querySelector(
-        '[data-motion="services-cta"]',
-      );
-
-      if (servicesSection && servicesIntro) {
-        gsap.fromTo(
-          servicesIntro,
-          {
-            autoAlpha: 0,
-            y: 18,
-          },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.65,
-            ease: "power3.out",
-            clearProps: "opacity,visibility,transform",
-
-            scrollTrigger: {
-              trigger: servicesSection,
-              start: "top 78%",
-              once: true,
-            },
-          },
-        );
-      }
-
-      serviceRecords.forEach((record) => {
-        gsap.fromTo(
-          record,
-          {
-            autoAlpha: 0,
-            y: 18,
-          },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.65,
-            ease: "power3.out",
-            clearProps: "opacity,visibility,transform",
-
-            scrollTrigger: {
-              trigger: record,
-              start: "top 84%",
-              once: true,
-            },
-          },
-        );
+      const image = root.querySelector('[data-motion="hero-image"]');
+      if (image) gsap.fromTo(image, { scale: 1.025 }, {
+        scale: 1, duration: 1.6, ease: "power2.out", clearProps: "transform",
       });
-
-      if (servicesCta) {
-        gsap.fromTo(
-          servicesCta,
-          {
-            autoAlpha: 0,
-            y: 12,
-          },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.5,
-            ease: "power3.out",
-            clearProps: "opacity,visibility,transform",
-
-            scrollTrigger: {
-              trigger: servicesCta,
-              start: "top 90%",
-              once: true,
-            },
-          },
-        );
-      }
-
-      /*
-       * CONTACT
-       *
-       * Almost still.
-       */
-
-      const contactSection = document.querySelector(
-        '[data-motion-section="contact"]',
-      );
-
-      const contactPrimary = contactSection?.querySelector(
-        '[data-motion="contact-primary"]',
-      );
-
-      const contactSecondary = contactSection?.querySelector(
-        '[data-motion="contact-secondary"]',
-      );
-
-      if (
-        contactSection &&
-        contactPrimary &&
-        contactSecondary
-      ) {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: contactSection,
-              start: "top 84%",
-              once: true,
-            },
-          })
-          .fromTo(
-            contactPrimary,
-            {
-              autoAlpha: 0,
-              y: 8,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.58,
-              ease: "power2.out",
-              clearProps: "opacity,visibility,transform",
-            },
-            0,
-          )
-          .fromTo(
-            contactSecondary,
-            {
-              autoAlpha: 0,
-              y: 6,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 0.52,
-              ease: "power2.out",
-              clearProps: "opacity,visibility,transform",
-            },
-            0.1,
-          );
-      }
     });
 
     /*
@@ -339,7 +57,7 @@ export default function HomeMotion() {
      */
 
     media.add(INTRO_DESKTOP_QUERY, () => {
-      const introductionSection = document.querySelector(
+      const introductionSection = root.querySelector(
         '[data-motion-section="introduction"]',
       );
 
@@ -373,21 +91,6 @@ export default function HomeMotion() {
           },
         })
         .fromTo(
-          introHeading,
-          {
-            autoAlpha: 0,
-            y: 18,
-          },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.6,
-            ease: "power3.out",
-            clearProps: "opacity,visibility,transform",
-          },
-          0,
-        )
-        .fromTo(
           introImage,
           {
             clipPath: "inset(6% 0% 0% 0%)",
@@ -403,21 +106,6 @@ export default function HomeMotion() {
             clearProps: "clipPath,transform",
           },
           0.14,
-        )
-        .fromTo(
-          introCopy,
-          {
-            autoAlpha: 0,
-            y: 18,
-          },
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.65,
-            ease: "power3.out",
-            clearProps: "opacity,visibility,transform",
-          },
-          0.34,
         );
     });
 
@@ -428,7 +116,7 @@ export default function HomeMotion() {
      */
 
     media.add(INTRO_MOBILE_QUERY, () => {
-      const introductionSection = document.querySelector(
+      const introductionSection = root.querySelector(
         '[data-motion-section="introduction"]',
       );
 
@@ -453,26 +141,6 @@ export default function HomeMotion() {
         return;
       }
 
-      gsap.fromTo(
-        introHeading,
-        {
-          autoAlpha: 0,
-          y: 14,
-        },
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 0.58,
-          ease: "power3.out",
-          clearProps: "opacity,visibility,transform",
-
-          scrollTrigger: {
-            trigger: introHeading,
-            start: "top 86%",
-            once: true,
-          },
-        },
-      );
 
       gsap.fromTo(
         introImage,
@@ -497,26 +165,6 @@ export default function HomeMotion() {
         },
       );
 
-      gsap.fromTo(
-        introCopy,
-        {
-          autoAlpha: 0,
-          y: 12,
-        },
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power2.out",
-          clearProps: "opacity,visibility,transform",
-
-          scrollTrigger: {
-            trigger: introCopy,
-            start: "top 88%",
-            once: true,
-          },
-        },
-      );
     });
 
     /*
@@ -533,7 +181,7 @@ export default function HomeMotion() {
      */
 
     media.add(HERO_DEPTH_QUERY, () => {
-      const heroSection = document.querySelector(
+      const heroSection = root.querySelector(
         '[data-motion-section="hero"]',
       );
     
@@ -574,7 +222,7 @@ export default function HomeMotion() {
      */
 
     media.add(BACKGROUND_AMBIENT_QUERY, () => {
-      const backgroundSection = document.querySelector(
+      const backgroundSection = root.querySelector(
         '[data-motion-section="background"]',
       );
 
@@ -614,7 +262,7 @@ export default function HomeMotion() {
      */
 
     media.add(SERVICES_DEPTH_QUERY, () => {
-      const servicesSection = document.querySelector(
+      const servicesSection = root.querySelector(
         '[data-motion-section="services"]',
       );
     
@@ -657,6 +305,7 @@ export default function HomeMotion() {
 
     return () => {
       window.cancelAnimationFrame(refreshFrame);
+      stopTypography();
       media.revert();
     };
   }, []);

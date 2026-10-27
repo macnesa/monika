@@ -2,6 +2,7 @@
 
 import { useLayoutEffect } from "react";
 import { gsap, ScrollTrigger } from "@/lib/motion/gsap";
+import { editorialRoute } from "@/lib/motion/editorial";
 
 const MOTION_CONDITIONS = {
   isMobile: "(max-width: 767px)",
@@ -11,93 +12,21 @@ const MOTION_CONDITIONS = {
 
 export default function BookMotion() {
   useLayoutEffect(() => {
+    const root = document.querySelector('[data-motion-section="book-hero"]')?.closest("main");
+    if (!root) return;
+    const stopTypography = editorialRoute(root, [
+      { scope: '[data-motion-section="book-hero"]', heading: '[data-motion="book-hero-title"]', support: '[data-motion="book-hero-support"] p', action: '[data-motion="book-hero-support"] a', eyebrow: '[data-motion="book-hero-eyebrow"]', hero: true },
+      { scope: '[data-motion="book-booking-info"] > div', heading: "h2", support: "p", action: "a", display: false },
+    ]);
     const media = gsap.matchMedia();
-    let refreshFrame = null;
-
     media.add(MOTION_CONDITIONS, (context) => {
       const { isMobile, reduceMotion } = context.conditions;
-
-      if (reduceMotion) {
-        return;
-      }
-
-      const hero = document.querySelector(
-        '[data-motion-section="book-hero"]',
-      );
-
-      if (hero) {
-        const eyebrow = hero.querySelector(
-          '[data-motion="book-hero-eyebrow"]',
-        );
-        const title = hero.querySelector(
-          '[data-motion="book-hero-title"]',
-        );
-        const support = hero.querySelector(
-          '[data-motion="book-hero-support"]',
-        );
-
-        const heroTimeline = gsap.timeline();
-
-        if (eyebrow) {
-          heroTimeline.fromTo(
-            eyebrow,
-            {
-              autoAlpha: 0,
-              y: isMobile ? 7 : 10,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: isMobile ? 0.36 : 0.46,
-              ease: "power2.out",
-            },
-            isMobile ? 0.04 : 0.08,
-          );
-        }
-
-        if (title) {
-          heroTimeline.fromTo(
-            title,
-            {
-              autoAlpha: 0,
-              y: isMobile ? 12 : 18,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: isMobile ? 0.58 : 0.72,
-              ease: "power3.out",
-            },
-            isMobile ? 0.1 : 0.16,
-          );
-        }
-
-        if (support) {
-          heroTimeline.fromTo(
-            support,
-            {
-              autoAlpha: 0,
-              y: isMobile ? 9 : 14,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: isMobile ? 0.48 : 0.58,
-              ease: "power3.out",
-            },
-            isMobile ? 0.23 : 0.34,
-          );
-        }
-      }
-
-      const bookingSection = document.querySelector(
+      if (reduceMotion) return;
+      const bookingSection = root.querySelector(
         '[data-motion-section="book-booking"]',
       );
 
       if (bookingSection) {
-        const info = bookingSection.querySelector(
-          '[data-motion="book-booking-info"]',
-        );
         const surface = bookingSection.querySelector(
           '[data-motion="book-booking-surface"]',
         );
@@ -109,23 +38,6 @@ export default function BookMotion() {
             once: true,
           },
         });
-
-        if (info) {
-          bookingTimeline.fromTo(
-            info,
-            {
-              autoAlpha: 0,
-              y: isMobile ? 10 : 16,
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: isMobile ? 0.46 : 0.58,
-              ease: "power3.out",
-            },
-            0,
-          );
-        }
 
         if (surface) {
           bookingTimeline.fromTo(
@@ -144,17 +56,11 @@ export default function BookMotion() {
           );
         }
       }
-
-      refreshFrame = window.requestAnimationFrame(() => {
-        ScrollTrigger.refresh();
-      });
     });
-
+    const refreshFrame = requestAnimationFrame(() => ScrollTrigger.refresh());
     return () => {
-      if (refreshFrame !== null) {
-        window.cancelAnimationFrame(refreshFrame);
-      }
-
+      cancelAnimationFrame(refreshFrame);
+      stopTypography();
       media.revert();
     };
   }, []);

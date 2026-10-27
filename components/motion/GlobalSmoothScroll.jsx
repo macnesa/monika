@@ -82,7 +82,16 @@ export default function GlobalSmoothScroll() {
 
     start();
 
+    // Suspend existing inertia during Work's modal or image handoff only.
+    const onWorkScrollLock = (event) => {
+      if (pathname !== "/work" || !lenis) return;
+      if (event.detail.locked) lenis.stop();
+      else { lenis.start(); lenis.scrollTo(window.scrollY, { immediate: true, force: true }); }
+    };
+    window.addEventListener("omnikaflow:work-scroll-lock", onWorkScrollLock);
+
     return () => {
+      window.removeEventListener("omnikaflow:work-scroll-lock", onWorkScrollLock);
       finePointer.removeEventListener(
         "change",
         syncRuntime,

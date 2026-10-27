@@ -15,9 +15,10 @@ export default function SiteHeader() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const isServices = pathname === "/services";
+  const isWork = pathname === "/work";
 
   return (
-    <header className="absolute inset-x-0 top-0 z-30 text-[#F5F1EB]">
+    <header data-site-header="" data-work-theme={isWork ? "light" : undefined} className={`${isWork ? "absolute min-[769px]:fixed data-[work-ending=true]:absolute data-[work-theme=light]:text-[#181619] data-[work-theme=light]:[&_nav]:text-[#625D58] data-[work-theme=light]:[&_nav_a]:text-inherit data-[work-theme=light]:[&_a]:focus-visible:ring-[#181619] data-[work-theme=light]:[&>div>a:last-child]:border-[#181619] data-[work-theme=light]:[&>div>a:last-child]:bg-[#181619] data-[work-theme=light]:[&>div>a:last-child]:text-[#F5F1EB]" : "absolute"} inset-x-0 top-0 z-30 text-[#F5F1EB]`}>
       <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-x-6 gap-y-5 px-5 py-5 sm:flex-nowrap sm:px-8 lg:px-10 lg:py-6">
         <Link
           href="/"
@@ -47,9 +48,9 @@ export default function SiteHeader() {
             Services
           </Link>
 
-          <span aria-disabled="true" className="cursor-default">
+          <Link href="/work" aria-current={isWork ? "page" : undefined} className={isWork ? activeNavClass : inactiveNavClass}>
             Work
-          </span>
+          </Link>
         </nav>
 
         <HeaderAction href="/book">Book A Call</HeaderAction>
