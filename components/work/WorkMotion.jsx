@@ -6,8 +6,9 @@ import { editorialLines, editorialRoute } from "@/lib/motion/editorial";
 
 // Interaction contract: Figma's "Interaction notes (for dev)".
 // No Pinterest-style image expansion. The /work route owns one pinned timeline.
+// Match the scatter's desktop layout; the content-fit check protects short windows.
 const ENHANCED =
-  "(min-width: 1024px) and (min-height: 800px) and (prefers-reduced-motion: no-preference)";
+  "(min-width: 769px) and (min-height: 640px) and (prefers-reduced-motion: no-preference)";
 const DEFAULT_SIZE = "text-[clamp(3.75rem,9vw,10rem)]";
 const PREVIEW_SIZE = "text-[clamp(2.4rem,6.8vw,7.5rem)]";
 const EASE = { enter: "power3.out", hover: "power2.out", scroll: "sine.inOut" };
@@ -348,7 +349,7 @@ function createWorkController({ root, projects, tiles, thumbs, onScrollAway }) {
         clearProps: "opacity,transform",
       });
     });
-    media.add("(max-width: 1023px), (max-height: 799px)", normalTypography);
+    media.add("(max-width: 768px), (max-height: 639px)", normalTypography);
     media.add(ENHANCED, () => {
       if (disposed) return;
       root.dataset.enhanced = "true";
