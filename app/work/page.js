@@ -51,8 +51,8 @@ const projects = [
   { id: "infinit", number: "01", title: "Infinit", location: "CZECH REPUBLIC · 2013–2023", scope: "Operations, facility launch, team leadership", headline: "8,000 m². Twelve saunas, four pools, around 300 people.", narrative: pendingNarrative(), cover: { id: "infinit-cover", src: "/images/work/projects/infinit-cover.png" }, images: gallery(0) },
   { id: "nirvana-life", number: "02", title: "Nirvana Life", location: "BERAWA, BALI · ONGOING", scope: "Guided sessions, events, saunamaster courses", headline: "Around 1,000 guests guided so far.", narrative: pendingNarrative(), images: gallery(3) },
   { id: "holywings", number: "03", title: "Holywings Wellness Club", location: "BERAWA BEACH, BALI", scope: "Saunamaster training, facility design consultation, guided sessions", headline: "The largest Aufguss sauna in Indonesia, with space for 50 guests.", narrative: pendingNarrative(), images: gallery(6) },
-  { id: "omni", number: "04", title: "Omni", location: "SESEH, BALI", scope: "Community events, guided contrast therapy", headline: "One-hour contrast therapy sessions, built around community.", narrative: pendingNarrative(), images: gallery(9) },
-  { id: "the-ark", number: "05", title: "The Ark", location: "PERERENAN, BALI", scope: "Sauna nights, guided contrast therapy", headline: "Sauna nights that finish in the Steam Dome.", narrative: pendingNarrative(), images: gallery(12) },
+  { id: "the-ark", number: "04", title: "The Ark", location: "PERERENAN, BALI", scope: "Sauna nights, guided contrast therapy", headline: "Sauna nights that finish in the Steam Dome.", narrative: pendingNarrative(), images: gallery(12) },
+  { id: "omni", number: "05", title: "Omni", location: "SESEH, BALI", scope: "Community events, guided contrast therapy", headline: "One-hour contrast therapy sessions, built around community.", narrative: pendingNarrative(), images: gallery(9) },
   { id: "mindzero", number: "06", title: "MINDZERO", location: "USA", scope: "Flagship launch, programming, expansion, hiring and training", headline: "MINDZERO · USA", narrative: pendingNarrative(), cover: { id: "mindzero-aufguss", src: "/images/work/projects/mindzero-aufguss.jpg" }, images: [
     { id: "mindzero-aufguss", alt: "Monika leading an Aufguss session with a white towel at MINDZERO" },
     { id: "mindzero-group", alt: "A group gathered inside the MINDZERO sauna" },
@@ -81,7 +81,7 @@ const scatterTiles = [
   { projectId: "omni", id: "omni-fan", positionClass: "min-[769px]:left-[73.717%] min-[769px]:top-[62.860%] min-[769px]:w-[6.657%] min-[769px]:h-[5.987%]" },
   { projectId: "infinit", id: "infinit-sauna-exterior", positionClass: "min-[769px]:left-[0.000%] min-[769px]:top-[77.716%] min-[769px]:w-[11.512%] min-[769px]:h-[14.856%]" },
   { projectId: "the-ark", id: "the-ark-steam-dome", positionClass: "min-[769px]:left-[17.337%] min-[769px]:top-[66.630%] min-[769px]:w-[12.205%] min-[769px]:h-[26.164%]" },
-  { projectId: "nirvana-life", id: "nirvana-exterior", positionClass: "min-[769px]:left-[36.685%] min-[769px]:top-[72.173%] min-[769px]:w-[8.183%] min-[769px]:h-[16.408%]" },
+  { projectId: "nirvana-life", id: "nirvana-pool-night", positionClass: "min-[769px]:left-[34.270%] min-[769px]:top-[66.260%] min-[769px]:w-[14.190%] min-[769px]:h-[22.960%]" },
   { projectId: "holywings", id: "holywings", positionClass: "min-[769px]:left-[53.467%] min-[769px]:top-[67.738%] min-[769px]:w-[13.245%] min-[769px]:h-[21.064%]" },
   { projectId: "nirvana-life", id: "nirvana-guidance", positionClass: "min-[769px]:left-[69.695%] min-[769px]:top-[75.055%] min-[769px]:w-[19.487%] min-[769px]:h-[17.627%]" },
   { projectId: "the-ark", id: "the-ark-lounge", positionClass: "min-[769px]:left-[90.291%] min-[769px]:top-[77.716%] min-[769px]:w-[9.709%] min-[769px]:h-[14.412%]" },
@@ -134,8 +134,8 @@ export default function WorkPage() {
                 <h1 id="work-heading" className="text-[clamp(3.75rem,9vw,10rem)] max-w-[90%] font-normal leading-[1.02] tracking-[-0.055em] [font-family:var(--font-tiempos-headline)]"><span data-work-heading-default=""><span data-work-word="" className="inline-block">All</span>{" "}<span data-work-word="" className="inline-block text-[#A49F99]">Work</span></span><span data-work-heading-preview="" hidden /></h1>
                 <span data-work-count="" className="pt-1 text-xs min-[769px]:pt-3 min-[769px]:text-sm">({projectCount})</span>
               </div>
-              <p className="mx-auto mt-5 max-w-[32ch] px-2 text-[0.875rem] leading-6 text-[#625D58] min-[769px]:mt-5">
-                Six projects, three countries. Everything below is work I did myself.
+              <p className="mx-auto mt-5 max-w-[58ch] px-2 text-[0.875rem] leading-6 text-[#625D58] min-[769px]:mt-5">
+                Grateful to everyone who let me be part of their wellness vision.
               </p>
             </div>
 
